@@ -31,14 +31,15 @@
           <ul class="list">
             <li class="list-inline-block">
               <a class="navigation-list link" href="">Студия</a>
+              <div class="element-hover"></div>
             </li>
             <li class="list-inline-block">
               <a class="navigation-list link" href="./portfolio.html"
-                >Портфолио</a
-              >
+                >Портфолио</a><div class="element-hover"></div>
             </li>
             <li class="list-inline-block">
               <a class="navigation-list link" href="">Контакты</a>
+              <div class="element-hover"></div>
             </li>
           </ul>
         </nav>
@@ -81,7 +82,7 @@
             Эффективные решения для вашего бизнеса
           </h1>
           <div class="button-spacing">
-            <button class="order-servies-button" type="button">
+            <button class="order-servies-button" type="button" data-modal-open>
               Заказать услугу
             </button>
           </div>
@@ -127,29 +128,39 @@
 
           <h2 class="dowedo-pics-heading">Чем мы занимаемся</h2>
           <div class="dowedo-pics-list">
-            <div>
+            <div class="dowedo-img-position">
               <img
                 src="./img/WebStudioimg1.jpg"
                 width="370"
                 height="294"
                 alt="typing text"
               />
+              <div class="overlay-dowedo">
+                <p class="overlay-text-dowedo">Десктопные приложения</p>
+                </div>
+             
             </div>
-            <div>
+            <div class="dowedo-img-position">
               <img
                 src="./img/WebStudioimg2.jpg"
                 width="370"
                 height="294"
                 alt="scrolling text"
               />
+              <div class="overlay-dowedo">
+                <p class="overlay-text-dowedo">Мобильные приложения</p>
+              </div>
             </div>
-            <div>
+            <div class="dowedo-img-position">
               <img
                 src="./img/WebStudioimg3.jpg"
                 width="370"
                 height="294"
                 alt="holding tablet"
               />
+              <div class="overlay-dowedo">
+                <p class="overlay-text-dowedo">Дизайнерские решения</p>
+              </div>
             </div>
           </div>
         </div>
@@ -415,5 +426,16 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-btn" data-modal-close>
+          <svg class="close-btn-svg"> 
+            <use href="./img/sprite.svg#icon-close"></use></svg></button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
+
   </body>
 </html>

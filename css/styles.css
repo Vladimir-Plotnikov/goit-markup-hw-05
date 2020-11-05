@@ -40,6 +40,49 @@ body {
   text-decoration: none;
 }
 
+.backdrop {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: all 500ms;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 528px;
+  height: 581px;
+  background-color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.close-btn-svg {
+  width: 30px;
+  height: 30px;
+}
+
 /*  ======== HOVER FOCUS ========  */
 
 .navigation-list:hover,
@@ -58,6 +101,7 @@ body {
 /*  ======== HEADER ========  */
 
 .header {
+  position: relative;
   width: 1600px;
   background: #ffffff;
 }
@@ -102,6 +146,15 @@ body {
   margin-bottom: 32px;
 }
 
+.element-hover {
+  display: flex;
+  bottom: 0%;
+  position: absolute;
+  width: 48px;
+  height: 4px;
+  background-color: white;
+}
+
 .navigation-list {
   display: inline-block;
   padding-right: 50px;
@@ -111,6 +164,11 @@ body {
   line-height: 1.142;
   letter-spacing: 0.02em;
   color: var(--title-light-theme-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.navigation-list:hover .element-hover {
+  background-color: var(--accent-color);
 }
 
 .navigation-list :last-child {
@@ -131,6 +189,7 @@ body {
   font-size: 14px;
   line-height: 1.714;
   color: var(--subtitle-light-theme-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .mail-svg-class {
@@ -138,6 +197,7 @@ body {
   padding-right: 5px;
   width: 16px;
   height: 12px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /*.header-mail.link:hover svg {
   fill: white; 
@@ -155,12 +215,14 @@ body {
   font-size: 14px;
   line-height: 1.714;
   color: var(--subtitle-light-theme-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .tel-svg-class {
   display: inline-block;
   width: 16px;
   height: 12px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-tel:hover svg {
@@ -213,6 +275,7 @@ body {
   font-size: 16px;
   line-height: 1.875;
   border: 0px;
+  cursor: pointer;
   /* identical to box height, or 187% */
 
   display: flex;
@@ -369,6 +432,33 @@ body {
   margin-right: 0px;
 }
 
+.dowedo-img-position {
+  position: relative;
+}
+
+.overlay-dowedo {
+  position: absolute;
+  left: 0%;
+  top: 75%;
+  display: flex;
+  width: 370px;
+  height: 70px;
+  background: rgba(47, 48, 58, 0.8);
+}
+
+.overlay-text-dowedo {
+  display: flex;
+  align-items: center;
+  margin-left: 83px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
 /*  ======== OUR TEAM container ========  */
 
 .ourteam-container {
@@ -413,6 +503,7 @@ body {
   height: 44px;
   border-radius: 50%;
   background-color: white;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-link:hover {
@@ -428,6 +519,7 @@ body {
   display: inline-block;
   width: 20px;
   height: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .ourteam-flexlist {
@@ -503,10 +595,12 @@ body {
   border: 1px solid #afb1b8;
   box-sizing: border-box;
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .svg-clients {
   fill: #afb1b8;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list-svg-clients:hover {
@@ -551,6 +645,7 @@ body {
   background: #f5f4fa;
   border: 0px;
   border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-list:hover,
 .button-list:focus {
@@ -566,6 +661,7 @@ body {
   background: #ffffff;
   border: 1px solid #eeeeee;
   box-sizing: border-box;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*.image-with {
@@ -690,6 +786,7 @@ background: rgba(33, 150, 243, 0.9);*/
   height: 44px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-list-link:hover {
@@ -715,6 +812,7 @@ background: rgba(33, 150, 243, 0.9);*/
   display: inline-block;
   width: 20px;
   height: 20px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-display {
@@ -748,6 +846,7 @@ background: rgba(33, 150, 243, 0.9);*/
   font-size: 14px;
   line-height: 1.714;
   color: var(--subtitle-dark-theme-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*  ======== END FOOTER container ========  */
