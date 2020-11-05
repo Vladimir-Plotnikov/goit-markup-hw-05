@@ -240,9 +240,7 @@ body {
   justify-content: space-between;
 }
 
-/*  ====.dowedo-list :last-child {
-  margin-right: 0 auto;
-}=======  */
+/*  ====dowedo-list =======  */
 
 .dowedo-main {
   margin-top: 94px;
@@ -531,13 +529,12 @@ body {
   justify-content: center;
 }
 .flex-box-list {
-  margin-left: 215px;
-  margin-top: 50px;
-  padding-bottom: 94px;
-  width: 1170px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin-top: 50px;
+  padding-bottom: 94px;
+  width: 1170px;
 }
 
 .button-list {
@@ -565,8 +562,6 @@ body {
   margin-bottom: 30px;
   width: 370px;
   height: 404px;
-  left: 215px;
-  top: 262px;
 
   background: #ffffff;
   border: 1px solid #eeeeee;
@@ -599,6 +594,55 @@ body {
 
   color: var(--subtitle-light-theme-color);
 }
+
+.overlay {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 215px;
+  top: 262px;
+  top: 0;
+  left: 0;
+
+  background: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition: 500ms linear;
+}
+
+.box-image-list:hover .overlay {
+  transform: translateX(0%);
+}
+
+.overlay-text {
+  margin-top: 63px;
+  margin-left: 24px;
+  margin-right: 24px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 28px;
+  /* or 156% */
+
+  letter-spacing: 0.03em;
+
+  color: #ffffff;
+}
+
+.overlay-image {
+  position: relative;
+  overflow: hidden;
+}
+
+/* hover overlay */
+
+/*position: absolute;
+width: 370px;
+height: 294px;
+left: 215px;
+top: 262px;
+
+background: rgba(33, 150, 243, 0.9);*/
 
 /*  ======== END PORTFOLIO container ========  */
 
