@@ -148,15 +148,17 @@ body {
 
 .element-hover {
   display: flex;
+  position: absolute;
   bottom: 0%;
   position: absolute;
-  width: 48px;
+  width: 70px;
   height: 4px;
   background-color: white;
 }
 
 .navigation-list {
   display: inline-block;
+  position: relative;
   padding-right: 50px;
   font-style: normal;
   font-weight: 500;
@@ -703,7 +705,7 @@ body {
 
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
-  transition: 500ms linear;
+  transition: 250ms linear;
 }
 
 .box-image-list:hover .overlay {
